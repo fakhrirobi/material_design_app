@@ -1,0 +1,9 @@
+{
+  "name": "MaterialDesignApp",
+  "displayName": "MaterialDesignApp",
+  "extra": {
+    "eas": {
+      "projectId": "56cf3711-13da-4b20-9367-01b26b79ed70"
+    }
+  }
+}
