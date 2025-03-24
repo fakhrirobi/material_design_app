@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, StyleSheet, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, Image, Dimensions,ScrollView } from 'react-native';
 import { Text } from 'react-native-paper';
 
 const CatalogScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Catalog</Text>
-      <View style={styles.imageContainer}>
+      <ScrollView contentContainerStyle={styles.scrollContainer} showsVerticalScrollIndicator={false}>
         <Image
           source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/640px-2ChocolateChipCookies.jpg' }}
           style={styles.image}
@@ -22,7 +22,7 @@ const CatalogScreen = () => {
           style={styles.image}
           accessibilityLabel="Kue Salju"
         />
-      </View>
+      </ScrollView>
     </View>
   );
 };
@@ -30,6 +30,10 @@ const CatalogScreen = () => {
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, alignItems: 'center', justifyContent: 'center' },
   title: { fontSize: 16, marginBottom: 20 },
+  scrollContainer: {
+    alignItems: 'center', // Center images
+    paddingBottom: 20, // Add space at the bottom
+  },
   imageContainer: { flexDirection: 'column', justifyContent: 'space-around', width: '100%' },
   image: {
     width: Dimensions.get('window').width - 40,

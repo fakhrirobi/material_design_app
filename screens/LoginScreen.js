@@ -11,7 +11,7 @@ const LoginScreen = ({ navigation }) => {
     if (username === 'pengguna' && password === 'masuk') {
       navigation.navigate('Catalog');
     } else {
-      setError('Wrong Username or Password');
+      setError('Username atau password salah');
     }
   };
 
@@ -24,7 +24,7 @@ const LoginScreen = ({ navigation }) => {
         onChangeText={setUsername}
         style={styles.input}
         mode="outlined"
-        accessibilityLabel="Input User"
+        accessibilityLabel="Input Username"
       />
       <TextInput
         label="Password"
@@ -36,8 +36,8 @@ const LoginScreen = ({ navigation }) => {
         accessibilityLabel="Input Password"
       />
       {error !== '' && <Text style={styles.error}>{error}</Text>}
-      <Button mode="contained" onPress={handleLogin} style={styles.button}>
-        Login
+      <Button mode="contained" onPress={handleLogin} buttonColor="#007BFF" style={styles.button}>
+        Masuk
       </Button>
     </View>
   );
